@@ -82,6 +82,12 @@
     <Compile Include="FormPedidos.Designer.cs">
       <DependentUpon>FormPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProductosServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductosServicios.Designer.cs">
+      <DependentUpon>FormProductosServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReportFacturas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <EmbeddedResource Include="FormPedidos.resx">
       <DependentUpon>FormPedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProductosServicios.resx">
+      <DependentUpon>FormProductosServicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReportFacturas.resx">
       <DependentUpon>FormReportFacturas.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +148,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL.ERP.ProductosServiciosBL+ProductosServicios.datasource" />
+    <None Include="Properties\DataSources\BL.ERP.ProductosServiciosBL.datasource" />
+    <None Include="Properties\DataSources\BL.ERP.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,6 +175,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagen erp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.ERP\BL.ERP.csproj">
+      <Project>{a529e7c5-ceaa-430d-9013-b6089858f883}</Project>
+      <Name>BL.ERP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Productos y Servicos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Productos y Servicos 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

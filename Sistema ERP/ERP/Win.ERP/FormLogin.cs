@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.ERP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,13 @@ namespace Win.ERP
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
+
         public FormLogin()
         {
             InitializeComponent();
-        }
+            _seguridad = new SeguridadBL();
+         }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -30,7 +34,9 @@ namespace Win.ERP
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
 
-            if(usuario == "Admin" && contraseña == "123456" || usuario == "Invitado" && contraseña == "000000")
+            var resultado = _seguridad.Autorizar(usuario, contraseña);
+
+            if(resultado == true)
             {
                 this.Close();
             }

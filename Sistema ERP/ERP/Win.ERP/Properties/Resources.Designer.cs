@@ -93,6 +93,26 @@ namespace Win.ERP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Productos_y_Servicos {
+            get {
+                object obj = ResourceManager.GetObject("Productos y Servicos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Productos_y_Servicos_2 {
+            get {
+                object obj = ResourceManager.GetObject("Productos y Servicos 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SECURITY {
             get {
                 object obj = ResourceManager.GetObject("SECURITY", resourceCulture);
