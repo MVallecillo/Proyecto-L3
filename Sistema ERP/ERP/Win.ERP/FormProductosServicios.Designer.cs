@@ -43,6 +43,15 @@
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.productosServiciosBL_ProductosServiciosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.productosServiciosBL_ProductosServiciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.codigoTextBox = new System.Windows.Forms.TextBox();
             this.costoTextBox = new System.Windows.Forms.TextBox();
@@ -51,14 +60,6 @@
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.productosServiciosBL_ProductosServiciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             costoLabel = new System.Windows.Forms.Label();
@@ -68,9 +69,72 @@
             tipoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productosServiciosBL_ProductosServiciosBindingNavigator)).BeginInit();
             this.productosServiciosBL_ProductosServiciosBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosServiciosBL_ProductosServiciosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // activoLabel
+            // 
+            activoLabel.AutoSize = true;
+            activoLabel.Location = new System.Drawing.Point(366, 127);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.TabIndex = 1;
+            activoLabel.Text = "Activo:";
+            // 
+            // codigoLabel
+            // 
+            codigoLabel.AutoSize = true;
+            codigoLabel.Location = new System.Drawing.Point(90, 67);
+            codigoLabel.Name = "codigoLabel";
+            codigoLabel.Size = new System.Drawing.Size(43, 13);
+            codigoLabel.TabIndex = 3;
+            codigoLabel.Text = "Código:";
+            // 
+            // costoLabel
+            // 
+            costoLabel.AutoSize = true;
+            costoLabel.Location = new System.Drawing.Point(90, 163);
+            costoLabel.Name = "costoLabel";
+            costoLabel.Size = new System.Drawing.Size(37, 13);
+            costoLabel.TabIndex = 5;
+            costoLabel.Text = "Costo:";
+            // 
+            // descripcionLabel
+            // 
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Location = new System.Drawing.Point(90, 95);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(66, 13);
+            descripcionLabel.TabIndex = 7;
+            descripcionLabel.Text = "Descripción:";
+            // 
+            // existenciaLabel
+            // 
+            existenciaLabel.AutoSize = true;
+            existenciaLabel.Location = new System.Drawing.Point(90, 215);
+            existenciaLabel.Name = "existenciaLabel";
+            existenciaLabel.Size = new System.Drawing.Size(58, 13);
+            existenciaLabel.TabIndex = 9;
+            existenciaLabel.Text = "Existencia:";
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(90, 189);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 11;
+            precioLabel.Text = "Precio:";
+            // 
+            // tipoLabel
+            // 
+            tipoLabel.AutoSize = true;
+            tipoLabel.Location = new System.Drawing.Point(90, 127);
+            tipoLabel.Name = "tipoLabel";
+            tipoLabel.Size = new System.Drawing.Size(31, 13);
+            tipoLabel.TabIndex = 13;
+            tipoLabel.Text = "Tipo:";
             // 
             // bindingNavigatorSeparator
             // 
@@ -105,10 +169,10 @@
             // 
             // productosServiciosBL_ProductosServiciosBindingNavigator
             // 
-            this.productosServiciosBL_ProductosServiciosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.productosServiciosBL_ProductosServiciosBindingNavigator.AddNewItem = null;
             this.productosServiciosBL_ProductosServiciosBindingNavigator.BindingSource = this.productosServiciosBL_ProductosServiciosBindingSource;
             this.productosServiciosBL_ProductosServiciosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.productosServiciosBL_ProductosServiciosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.productosServiciosBL_ProductosServiciosBindingNavigator.DeleteItem = null;
             this.productosServiciosBL_ProductosServiciosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -121,7 +185,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem});
+            this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem,
+            this.toolStripButtonCancelar});
             this.productosServiciosBL_ProductosServiciosBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.productosServiciosBL_ProductosServiciosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.productosServiciosBL_ProductosServiciosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -133,163 +198,9 @@
             this.productosServiciosBL_ProductosServiciosBindingNavigator.TabIndex = 0;
             this.productosServiciosBL_ProductosServiciosBindingNavigator.Text = "bindingNavigator1";
             // 
-            // activoLabel
-            // 
-            activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(366, 127);
-            activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
-            activoLabel.TabIndex = 1;
-            activoLabel.Text = "Activo:";
-            // 
-            // activoCheckBox
-            // 
-            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.productosServiciosBL_ProductosServiciosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(438, 122);
-            this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.activoCheckBox.TabIndex = 2;
-            this.activoCheckBox.UseVisualStyleBackColor = true;
-            this.activoCheckBox.CheckedChanged += new System.EventHandler(this.activoCheckBox_CheckedChanged);
-            // 
-            // codigoLabel
-            // 
-            codigoLabel.AutoSize = true;
-            codigoLabel.Location = new System.Drawing.Point(90, 67);
-            codigoLabel.Name = "codigoLabel";
-            codigoLabel.Size = new System.Drawing.Size(43, 13);
-            codigoLabel.TabIndex = 3;
-            codigoLabel.Text = "Código:";
-            // 
-            // codigoTextBox
-            // 
-            this.codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Codigo", true));
-            this.codigoTextBox.Location = new System.Drawing.Point(162, 63);
-            this.codigoTextBox.Name = "codigoTextBox";
-            this.codigoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.codigoTextBox.TabIndex = 4;
-            // 
-            // costoLabel
-            // 
-            costoLabel.AutoSize = true;
-            costoLabel.Location = new System.Drawing.Point(90, 163);
-            costoLabel.Name = "costoLabel";
-            costoLabel.Size = new System.Drawing.Size(37, 13);
-            costoLabel.TabIndex = 5;
-            costoLabel.Text = "Costo:";
-            // 
-            // costoTextBox
-            // 
-            this.costoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Costo", true));
-            this.costoTextBox.Location = new System.Drawing.Point(162, 160);
-            this.costoTextBox.Name = "costoTextBox";
-            this.costoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.costoTextBox.TabIndex = 6;
-            // 
-            // descripcionLabel
-            // 
-            descripcionLabel.AutoSize = true;
-            descripcionLabel.Location = new System.Drawing.Point(90, 95);
-            descripcionLabel.Name = "descripcionLabel";
-            descripcionLabel.Size = new System.Drawing.Size(66, 13);
-            descripcionLabel.TabIndex = 7;
-            descripcionLabel.Text = "Descripción:";
-            // 
-            // descripcionTextBox
-            // 
-            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Descripcion", true));
-            this.descripcionTextBox.Location = new System.Drawing.Point(162, 92);
-            this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(303, 20);
-            this.descripcionTextBox.TabIndex = 8;
-            // 
-            // existenciaLabel
-            // 
-            existenciaLabel.AutoSize = true;
-            existenciaLabel.Location = new System.Drawing.Point(90, 215);
-            existenciaLabel.Name = "existenciaLabel";
-            existenciaLabel.Size = new System.Drawing.Size(58, 13);
-            existenciaLabel.TabIndex = 9;
-            existenciaLabel.Text = "Existencia:";
-            // 
-            // existenciaTextBox
-            // 
-            this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Existencia", true));
-            this.existenciaTextBox.Location = new System.Drawing.Point(162, 212);
-            this.existenciaTextBox.Name = "existenciaTextBox";
-            this.existenciaTextBox.Size = new System.Drawing.Size(104, 20);
-            this.existenciaTextBox.TabIndex = 10;
-            // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(90, 189);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 11;
-            precioLabel.Text = "Precio:";
-            // 
-            // precioTextBox
-            // 
-            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(162, 186);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(104, 20);
-            this.precioTextBox.TabIndex = 12;
-            // 
-            // tipoLabel
-            // 
-            tipoLabel.AutoSize = true;
-            tipoLabel.Location = new System.Drawing.Point(90, 127);
-            tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(31, 13);
-            tipoLabel.TabIndex = 13;
-            tipoLabel.Text = "Tipo:";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Producto",
-            "Servicio"});
-            this.checkedListBox1.Location = new System.Drawing.Point(162, 120);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(81, 34);
-            this.checkedListBox1.TabIndex = 15;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Win.ERP.Properties.Resources.Productos_y_Servicos;
-            this.pictureBox1.Location = new System.Drawing.Point(516, 142);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // productosServiciosBL_ProductosServiciosBindingSource
             // 
             this.productosServiciosBL_ProductosServiciosBindingSource.DataSource = typeof(BL.ERP.ProductosServiciosBL.ProductosServicios);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -327,14 +238,119 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
             // productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem
             // 
             this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.Enabled = false;
             this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.Image")));
             this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.Name = "productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem";
             this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem.Click += new System.EventHandler(this.productosServiciosBL_ProductosServiciosBindingNavigatorSaveItem_Click);
+            // 
+            // toolStripButtonCancelar
+            // 
+            this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
+            this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancelar.Text = "Cancelar";
+            this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
+            // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.productosServiciosBL_ProductosServiciosBindingSource, "Activo", true));
+            this.activoCheckBox.Location = new System.Drawing.Point(438, 122);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.activoCheckBox.TabIndex = 2;
+            this.activoCheckBox.UseVisualStyleBackColor = true;
+            this.activoCheckBox.CheckedChanged += new System.EventHandler(this.activoCheckBox_CheckedChanged);
+            // 
+            // codigoTextBox
+            // 
+            this.codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Codigo", true));
+            this.codigoTextBox.Location = new System.Drawing.Point(162, 63);
+            this.codigoTextBox.Name = "codigoTextBox";
+            this.codigoTextBox.ReadOnly = true;
+            this.codigoTextBox.Size = new System.Drawing.Size(104, 20);
+            this.codigoTextBox.TabIndex = 4;
+            // 
+            // costoTextBox
+            // 
+            this.costoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Costo", true));
+            this.costoTextBox.Location = new System.Drawing.Point(162, 160);
+            this.costoTextBox.Name = "costoTextBox";
+            this.costoTextBox.Size = new System.Drawing.Size(104, 20);
+            this.costoTextBox.TabIndex = 6;
+            // 
+            // descripcionTextBox
+            // 
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(162, 92);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(303, 20);
+            this.descripcionTextBox.TabIndex = 8;
+            // 
+            // existenciaTextBox
+            // 
+            this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Existencia", true));
+            this.existenciaTextBox.Location = new System.Drawing.Point(162, 212);
+            this.existenciaTextBox.Name = "existenciaTextBox";
+            this.existenciaTextBox.Size = new System.Drawing.Size(104, 20);
+            this.existenciaTextBox.TabIndex = 10;
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosServiciosBL_ProductosServiciosBindingSource, "Precio", true));
+            this.precioTextBox.Location = new System.Drawing.Point(162, 186);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(104, 20);
+            this.precioTextBox.TabIndex = 12;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Producto",
+            "Servicio"});
+            this.checkedListBox1.Location = new System.Drawing.Point(162, 120);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(81, 34);
+            this.checkedListBox1.TabIndex = 15;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::Win.ERP.Properties.Resources.Productos_y_Servicos;
+            this.pictureBox1.Location = new System.Drawing.Point(516, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // FormProductosServicios
             // 
@@ -364,8 +380,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productosServiciosBL_ProductosServiciosBindingNavigator)).EndInit();
             this.productosServiciosBL_ProductosServiciosBindingNavigator.ResumeLayout(false);
             this.productosServiciosBL_ProductosServiciosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosServiciosBL_ProductosServiciosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,5 +411,6 @@
         private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
     }
 }

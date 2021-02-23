@@ -67,6 +67,44 @@ namespace BL.ERP
             return ListaProductosServicios;
         }
 
+        public Resultado GuardarProductosServicios(ProductosServicios productosservicios)
+        {
+            var resultado = Validar(productosservicios);
+            if(resultado.Exitoso == false)
+            {
+                return resultado;
+
+            }
+
+            if(productosservicios.Codigo == 0)
+            {
+                productosservicios.Codigo = ListaProductosServicios.Max(item => item.Codigo) + 1;
+            }
+
+            resultado.Exitoso = true;
+            return resultado;
+        }
+
+        public void AgregarProductosServicios()
+        {
+            var nuevoProductosServicios = new ProductosServicios();
+            ListaProductosServicios.Add(nuevoProductosServicios);
+        }
+
+        public bool EliminarProductosServicios(int codigo)
+        {
+            foreach (var item in ListaProductosServicios)
+            {
+                if(item.Codigo == codigo)
+                {
+                    ListaProductosServicios.Remove(item);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
     public class ProductosServicios
     {
         public int Codigo { get; set; }
@@ -77,5 +115,43 @@ namespace BL.ERP
         public int Existencia { get; set; }
         public bool Activo { get; set; }
       }
+
+        private Resultado Validar (ProductosServicios productosservicios)
+        {
+            var resultado = new Resultado();
+            resultado.Exitoso = true;
+
+            if(string.IsNullOrEmpty(productosservicios.Descripcion) == true)
+            {
+                resultado.Mensaje = "Ingrese una descripción.";
+                resultado.Exitoso = false;
+            }
+
+            if (productosservicios.Costo < 0)
+            {
+                resultado.Mensaje = "El costo no debe ser menor que cero (0).";
+                resultado.Exitoso = false;
+            }
+
+            if (productosservicios.Precio < 0)
+            {
+                resultado.Mensaje = "El precio no debe ser menor a cero (0)";
+                resultado.Exitoso = false;
+            }
+
+            if (productosservicios.Existencia < 0)
+            {
+                resultado.Mensaje = "La existencia no debe ser menor que cero (0)";
+                resultado.Exitoso = false;
+            }
+
+            return resultado;
+        }
+    }
+
+    public class Resultado
+    {
+        public bool Exitoso { get; set; }
+        public string Mensaje { get; set; }
     }
 }
